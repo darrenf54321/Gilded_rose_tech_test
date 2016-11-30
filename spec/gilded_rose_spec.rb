@@ -1,5 +1,5 @@
-
 require 'gilded_rose'
+require 'item'
 
 describe GildedRose do
 
@@ -10,5 +10,13 @@ describe GildedRose do
       expect(items[0].name).to eq "foo"
     end
   end
+
+    it "each day reduces the sell_in by 1" do
+      items = [Item.new("foo", 5, 0)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].sell_in).to eq 4
+    end
+
+
 
 end
