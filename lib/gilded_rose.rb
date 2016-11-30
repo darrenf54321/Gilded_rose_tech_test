@@ -4,16 +4,15 @@ class GildedRose
     @items = items
   end
 
-  def conjured
-    #to be continued!
-  end
-
   def update_quality
     sulfuras
     quality_brie
     quality_backstage_pass
     reduce_sell_in
     update_item_quality
+  end
+
+  def conjured
   end
 
   def reduce_sell_in
