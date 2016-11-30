@@ -74,15 +74,15 @@ describe "#Backstage Pass" do
     end
 
     it "the Quality increases by by 3 when there are 5 days of sell_in or less" do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 4, 3)]
+      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 2, 10)]
       GildedRose.new(items).update_quality
-      expect(items[0].quality).to eq 6
+      expect(items[0].quality).to eq 13
     end
 
     it "the Quality increases by by 2 when there are 10 days of sell_in or less (but more than 5)" do
-      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 8, 5)]
+      items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 8, 15)]
       GildedRose.new(items).update_quality
-      expect(items[0].quality).to eq 7
+      expect(items[0].quality).to eq 17
     end
 
     it 'Quality drops to 0 when the concert has past' do
