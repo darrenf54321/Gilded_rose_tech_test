@@ -4,6 +4,10 @@ class GildedRose
     @items = items
   end
 
+  def conjured
+    #to be continued!
+  end
+
   def update_quality
     sulfuras
     quality_brie
@@ -22,7 +26,7 @@ class GildedRose
 
   def update_item_quality
     @items.each do |item|
-      if item.name != "Aged Brie" 
+      if item.name != "Aged Brie"
         if item.quality == 0
           item.quality = 0
         elsif item.sell_in < 0
